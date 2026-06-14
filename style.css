@@ -1555,3 +1555,25 @@ img {
         height: 195px;
     }
 }
+
+/* ========================================
+   SKILL IMAGE
+   ======================================== */
+.skill-image-wrap {
+    margin: var(--space-md) 0;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid var(--border-subtle);
+    background: var(--bg-card);
+}
+
+.skill-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform var(--transition-slow);
+}
+
+.skill-card:hover .skill-image {
+    transform: scale(1.03);
+}
