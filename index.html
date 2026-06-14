@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="김윤철 - AX Engineer | 12년 이상의 개발 경력을 보유한 AX 엔지니어의 이력서 및 포트폴리오">
+    <meta name="keywords" content="김윤철, AX Engineer, AX 엔지니어, 포트폴리오, 이력서">
+    <title>김윤철 | AX Engineer - Portfolio & Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Animated background particles -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-brand">
+            <span class="brand-icon">⚡</span>
+            <span class="brand-text">김윤철 - 이력서 & 포트폴리오</span>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#hero" class="nav-link active" data-section="hero">홈</a></li>
+            <li><a href="#about" class="nav-link" data-section="about">소개</a></li>
+            <li><a href="#skills" class="nav-link" data-section="skills">핵심역량</a></li>
+            <li><a href="#experience" class="nav-link" data-section="experience">경력</a></li>
+            <li><a href="#projects" class="nav-link" data-section="projects">프로젝트</a></li>
+            <li><a href="#education" class="nav-link" data-section="education">학력</a></li>
+            <li><a href="#contact" class="nav-link" data-section="contact">연락처</a></li>
+        </ul>
+        <button class="nav-toggle" id="nav-toggle" aria-label="메뉴 토글">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                AX Engineer
+            </div>
+            <h1 class="hero-title">
+                <span class="title-line">안녕하세요,</span>
+                <span class="title-line title-name">김윤철<span class="title-accent">입니다.</span></span>
+            </h1>
+            <p class="hero-description">
+                <span id="career-years-text">12년</span> 이상의 개발 경력을 가진 <strong>AX 엔지니어</strong>입니다.<br>
+                Airflow ETL, Gemini·GPT 기반 AI 솔루션, XGBoost 예측 모델,<br>
+                그리고 <em>Antigravity 2.0 멀티 에이전트 바이브코딩</em>까지 하고 있습니다.
+            </p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" id="stat-total-career">0</span>
+                    <span class="stat-unit" id="stat-total-career-unit">년</span>
+                    <span class="stat-label">총 경력</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number" id="stat-companies">0</span>
+                    <span class="stat-unit">개사</span>
+                    <span class="stat-label">재직 경험</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number" id="stat-avg-tenure">0</span>
+                    <span class="stat-unit" id="stat-avg-tenure-unit">년</span>
+                    <span class="stat-label">평균 근속년수</span>
+                </div>
+            </div>
+            <div class="hero-actions">
+                <a href="#contact" class="btn btn-primary">
+                    <span>연락하기</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </a>
+                <a href="#experience" class="btn btn-secondary">
+                    <span>경력 보기</span>
+                </a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="profile-photo-wrap">
+                <div class="profile-photo-glow"></div>
+                <img src="images/image.png" alt="김윤철 프로필 사진" class="profile-photo">
+                <div class="profile-status">
+                    <span class="status-dot"></span>
+                    <span>현재 재직중</span>
+                </div>
+            </div>
+            <div class="hero-card">
+                <div class="card-header">
+                    <div class="card-dots">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <span class="card-title">profile.json</span>
+                </div>
+                <pre class="card-code"><code>{
+  <span class="code-key">"name"</span>: <span class="code-string">"김윤철"</span>,
+  <span class="code-key">"role"</span>: <span class="code-string">"AX Engineer"</span>,
+  <span class="code-key">"company"</span>: <span class="code-string">"클리오 코스메틱스"</span>,
+  <span class="code-key">"position"</span>: <span class="code-string">"과장 / DX팀"</span>,
+  <span class="code-key">"skills"</span>: [
+    <span class="code-string">"Airflow"</span>, <span class="code-string">"ETL"</span>,
+    <span class="code-string">"Vibe Coding"</span>, <span class="code-string">"AI Agent"</span>,
+    <span class="code-string">"Google Workspace"</span>
+  ],
+  <span class="code-key">"passion"</span>: <span class="code-string">"∞"</span>
+}</code></pre>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>스크롤</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">ABOUT ME</span>
+                <h2 class="section-title">자기소개</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-card glass-card">
+                    <div class="about-icon">💼</div>
+                    <h3>업무 스타일</h3>
+                    <p>20살 아르바이트 근무부터 지금까지 <strong>지각 한 번 없는 성실함</strong>을 가지고 있습니다. 엔지니어로서 기획서를 꼼꼼하게 체크하고 개발하는 것은 기본이며,
+                        임원 및 기획자의 의도를 파악·공감하고 크로스체크할 수 있는 <strong>유연함</strong>을 갖추고 있습니다.</p>
+                </div>
+                <div class="about-card glass-card">
+                    <div class="about-icon">🤝</div>
+                    <h3>성격 및 대인관계</h3>
+                    <p>내향적이지만 누구와도 친하게 지낼 수 있습니다. 클리오에서도 사내동아리 2개를 참여하며 좋은 관계를 유지하고 있고, <strong>선배에게는 싹싹함</strong>을,
+                        <strong>후배에게는 든든한 선배</strong>가 되는 것을 지향합니다.
+                    </p>
+                </div>
+                <div class="about-card glass-card">
+                    <div class="about-icon">🚀</div>
+                    <h3>AX 비전</h3>
+                    <p>AI 시대에서 가장 중요한 것은 새로운 기술을 받아들이는 <strong>수용력에 기반한 교육 습득</strong>이라고 생각합니다. 이를 구현하고자 하는 <strong>논리적
+                            사고</strong>, 그리고 동료들에게 <strong>투명하게 교육하고 전파</strong>하는 것 — 이 세 가지가 AX 엔지니어의 핵심이라고 믿습니다.</p>
+                </div>
+                <!--
+                    ======================================================
+                    [RULE] 동적 기간 계산 규칙 (data-duration)
+                    ======================================================
+                    기간(X년 Y개월)을 표시할 때는 하드코딩하지 않고,
+                    아래 data 속성을 가진 <span>을 사용합니다.
+                    JS(initDynamicDurations)가 자동으로 계산하여 텍스트를 채웁니다.
+
+                    사용법:
+                      <span class="dynamic-duration"
+                            data-duration-start="YYYY-MM"
+                            data-duration-end="YYYY-MM 또는 생략(=오늘)">
+                      </span>
+
+                    예시:
+                      data-duration-start="2021-08"                → 2021.08~오늘
+                      data-duration-start="2021-08" data-duration-end="2024-03" → 2021.08~2024.03
+                    ======================================================
+                -->
+                <div class="about-card glass-card">
+                    <div class="about-icon">🏭</div>
+                    <h3>도메인 전문성</h3>
+                    <p>화장품 업계에서 <strong><span class="dynamic-duration" data-duration-start="2021-08"></span></strong>
+                        근무하며 ERP·SCM·WMS·PLM·MIS 등 각 시스템을 이해하고, PLM·MIS·자사몰은 직접 운영했습니다.
+                        <strong>BM·디자인·마케팅·영업·경영전략</strong> 부서와의 협업 경험은 AI 시대에서도 대체하기 어려운 도메인 역량이라고 자신합니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section section-dark" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">CORE SKILLS</span>
+                <h2 class="section-title">핵심역량</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card glass-card" data-aos="fade-up">
+                    <div class="skill-icon-wrap">
+                        <div class="skill-icon">🔄</div>
+                    </div>
+                    <h3>ETL & Data Pipeline</h3>
+                    <p>Airflow를 활용하여 사내·외부 데이터를 DataWarehouse에 적재</p>
+                    <ul class="skill-details">
+                        <li>기간계 솔루션(ERP, SCM) 데이터 수집 및 적재</li>
+                        <li>올리브영·무신사 외부 랭킹 데이터 크롤링</li>
+                        <li>날씨·공휴일 등 외부 공공 데이터 수집</li>
+                        <li>IPRoyal 프록시를 활용한 틱톡 크롤링 <span class="detail-tech">(Anti-Bot 우회)</span></li>
+                    </ul>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Apache Airflow</span>
+                        <span class="skill-tag">ETL</span>
+                        <span class="skill-tag">Data Warehouse</span>
+                        <span class="skill-tag">IPRoyal</span>
+                        <span class="skill-tag">Crawling</span>
+                    </div>
+                </div>
+                <div class="skill-card glass-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="skill-icon-wrap">
+                        <div class="skill-icon">🤖</div>
+                    </div>
+                    <h3>AI & Automation</h3>
+                    <p>LLM API 및 Text-to-SQL 기술을 활용한 사내 AI 시스템 개발</p>
+                    <ul class="skill-details">
+                        <li>대표 AI 실시간 번역 발표 프로그램 개발 및 발표 감독 <span class="detail-tech">(Gemini)</span></li>
+                        <li>사내 담당자 인원·근무 지역 검색 Slack 봇 개발 <span class="detail-tech">(Gemini, GPT)</span></li>
+                        <li>틱톡 트렌딩 크롤링 → 마케팅팀 분석 리포트 자동화 <span class="detail-tech">(APIFY, IPRoyal, Gemini, GPT)</span>
+                        </li>
+                    </ul>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Gemini API</span>
+                        <span class="skill-tag">GPT API</span>
+                        <span class="skill-tag">Text-to-SQL</span>
+                        <span class="skill-tag">APIFY</span>
+                        <span class="skill-tag">IPRoyal</span>
+                    </div>
+                </div>
+                <div class="skill-card glass-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="skill-icon-wrap">
+                        <div class="skill-icon">💻</div>
+                    </div>
+                    <h3>Vibe Coding</h3>
+                    <p>Antigravity 2.0 멀티 에이전트 기반 AI 코딩으로 생산성 극대화</p>
+                    <ul class="skill-details">
+                        <li>목차 및 에이전트 역할 부여를 통한 일관되고 품질 높은 코드 작성</li>
+                        <li><code>/goal</code> 커맨드를 활용, 퇴근 이후에도 자동 개발 → 생산성 향상</li>
+                    </ul>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Antigravity 2.0</span>
+                        <span class="skill-tag">Multi-Agent</span>
+                        <span class="skill-tag">Cursor</span>
+                        <span class="skill-tag">/goal</span>
+                    </div>
+                </div>
+                <div class="skill-card glass-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="skill-icon-wrap">
+                        <div class="skill-icon">🌐</div>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Full-stack 웹 개발 (Frontend & Backend)</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Spring</span>
+                        <span class="skill-tag">PHP</span>
+                        <span class="skill-tag">ASP</span>
+                        <span class="skill-tag">C#</span>
+                        <span class="skill-tag">JavaScript</span>
+                    </div>
+                </div>
+                <div class="skill-card glass-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="skill-icon-wrap">
+                        <div class="skill-icon">📊</div>
+                    </div>
+                    <h3>BI & Analytics</h3>
+                    <p>데이터 시각화 및 리포팅 시스템 구축</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">MIS</span>
+                        <span class="skill-tag">Tableau</span>
+                        <span class="skill-tag">ibSheet</span>
+                        <span class="skill-tag">Data Viz</span>
+                    </div>
+                </div>
+                <div class="skill-card glass-card" data-aos="fade-up" data-aos-delay="450">
+                    <div class="skill-icon-wrap">
+                        <div class="skill-icon">🧠</div>
+                    </div>
+                    <h3>ML</h3>
+                    <p>머신러닝 모델을 활용한 비즈니스 예측 시스템 구축</p>
+                    <ul class="skill-details">
+                        <li>XGBoost를 활용한 거래처별 자재 단가 예측 프로그램 개발 중</li>
+                        <li>데이터 기반 의사결정을 위한 예측 모델링</li>
+                    </ul>
+                    <div class="skill-tags">
+                        <span class="skill-tag">XGBoost</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">ML Pipeline</span>
+                    </div>
+                </div>
+                <div class="skill-card glass-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="skill-icon-wrap">
+                        <div class="skill-icon">📚</div>
+                    </div>
+                    <h3>Education & Leadership</h3>
+                    <p>AI 챔피언 제도 운영 및 사내 교육 담당</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">교육 매뉴얼</span>
+                        <span class="skill-tag">AI 챔피언</span>
+                        <span class="skill-tag">Google Workspace</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">EXPERIENCE</span>
+                <h2 class="section-title">경력사항</h2>
+                <p class="section-subtitle" id="experience-subtitle">총 경력 계산중...</p>
+            </div>
+            <div class="timeline">
+                <!-- 클리오 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="marker-dot current"></div>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="timeline-content glass-card">
+                        <div class="timeline-header">
+                            <div class="timeline-company-info">
+                                <h3 class="timeline-company">클리오 (CLIO)</h3>
+                                <span class="timeline-badge badge-current">현재 재직중</span>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="timeline-period">2021.08 ~ 현재 (<span class="dynamic-duration"
+                                        data-duration-start="2021-08"></span>)</span>
+                                <span class="timeline-position">과장 / DX팀</span>
+                            </div>
+                        </div>
+                        <p class="timeline-desc">글로벌 코스메틱 제조유통회사 | 직원수 366명 | 매출액 3,289억원 (2025)</p>
+
+                        <div class="timeline-projects">
+                            <!-- AX 과제 그룹 -->
+                            <div class="project-group">
+                                <div class="project-group-header">
+                                    <h4>🔥 AX 과제 (AI Transformation)</h4>
+                                    <span class="project-period">2025.08 ~ 현재 (<span class="dynamic-duration"
+                                            data-duration-start="2025-08"></span>)</span>
+                                </div>
+                                <div class="project-item">
+                                    <h4>🔄 ETL 파이프라인 설계</h4>
+                                    <p>Airflow 기반으로 사내 데이터(ERP, SCM, WMS)와 외부 데이터(올리브영, 틱톡)를 DataWarehouse에 적재하는 파이프라인
+                                        구축. 데이터 품질을 위한 테이블·필드 생성 룰 설계 및 관리.</p>
+                                </div>
+                                <div class="project-item">
+                                    <h4>📊 올리브영 AI 리포트</h4>
+                                    <p>올리브영 랭킹·리뷰 데이터를 자동 수집하여, AI가 분석한 일일 리포트를 매일 자동 발송하는 솔루션 개발.</p>
+                                </div>
+                                <div class="project-item">
+                                    <h4>📱 틱톡 트렌드 센싱</h4>
+                                    <p>급상승 키워드를 크롤링하고 Apify로 영상 데이터를 수집, AI 분석 후 Slack 리포트 전송. 마케팅팀이 매일 프롬프트를 수정하여 결과를
+                                        활용.</p>
+                                </div>
+                                <div class="project-item">
+                                    <h4>🤖 담당자 누구 봇</h4>
+                                    <p>사내 데이터 및 Slack 데이터를 수집하여, Slack 커맨드로 자연어 입력 시 Text-to-SQL → LLM 분석 → 사내 담당자를 호출하는
+                                        앱 개발.</p>
+                                </div>
+                                <div class="project-item">
+                                    <h4>🎤 대표 실시간 번역 발표</h4>
+                                    <p>Gemini 기반 AI 실시간 번역 발표 프로그램 개발 및 발표 감독.</p>
+                                </div>
+                                <div class="project-item">
+                                    <h4>🧠 ML 자재 단가예측 챗봇</h4>
+                                    <p>Gemini + XGBoost 기반 챗봇 시스템 개발. PLM 제품사양서 데이터를 전처리하여 거래처별 자재 단가를 예측하고, 거래처 화재 등 리스크 뉴스 데이터도 수집하여 실시간 알림 제공.</p>
+                                </div>
+                            </div>
+                            <div class="project-item">
+                                <h4>📦 PLM (전사 제품 수명주기 관리) <span class="project-period">2023.04 ~ 현재 (<span
+                                            class="dynamic-duration" data-duration-start="2023-04"></span>)</span></h4>
+                                <p>전사 신제품 수명주기 관리 시스템 개발. 제품사양서(자사 제품 규격 정보)를 규격화하여 체계적으로 관리할 수 있도록 설계·개발.</p>
+                            </div>
+                            <div class="project-item">
+                                <h4>🛒 클럽클리오 자사몰 (B2C) <span class="project-period">2022.11 ~ 2025.07 (<span
+                                            class="dynamic-duration" data-duration-start="2022-11"
+                                            data-duration-end="2025-07"></span>)</span></h4>
+                                <p>MD팀과 기획 협업, Back-end·Front-end·DB·NCP 전담으로 <strong>단독 개발·운영</strong>. 서버 비용 40% 절감,
+                                    리뷰·검색 시스템 내재화로 연 600만원+ 절감. <strong>ISMS 인증 진행</strong>.</p>
+                            </div>
+                            <div class="project-item">
+                                <h4>📈 MIS (자사 BI 툴) <span class="project-period">2021.08 ~ 2022.11 (<span
+                                            class="dynamic-duration" data-duration-start="2021-08"
+                                            data-duration-end="2022-11"></span>)</span></h4>
+                                <p>기존 매출 분석 툴(태블로, 올랩 등)을 하나로 통합한 자사 BI 툴 신규 개발. ibSheet 라이브러리 활용.</p>
+                            </div>
+                            <div class="project-item project-item-highlight">
+                                <h4>☁️ Google Workspace 도입 & 사내 교육</h4>
+                                <p>Google Workspace POC 및 계약을 주도적으로 진행. <strong>사내 교육 전담 담당자</strong>로 지정되어 교육 매뉴얼을 직접
+                                    작성하고, <strong>대표이사, 임원진, 전 직원 대상</strong>으로 교육을 도맡아 진행. AI 챔피언 제도를 운영하여 AI 파일럿 교육과
+                                    AI Agent 과제를 사원 스스로 도출하게끔 독려하고 있으며, 라포 형성을 통해 교육 품질과 이해도를 높이는 다방면의 노력을 기울이고 있습니다.
+                                </p>
+                                <!-- GWS Training Photos -->
+                                <div class="project-gallery">
+                                    <div class="gallery-item">
+                                        <img src="images/gws-training-speaking.jpg"
+                                            alt="Google Workspace 사내 교육 발표 중인 김윤철" loading="lazy">
+                                        <span class="gallery-caption">GWS 도입 교육 발표</span>
+                                    </div>
+                                    <div class="gallery-item">
+                                        <img src="images/gws-training-audience.jpg"
+                                            alt="클리오 전 직원 대상 Google Workspace 교육 현장" loading="lazy">
+                                        <span class="gallery-caption">전 직원 대상 교육 현장</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CJ메조미디어 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="timeline-content glass-card">
+                        <div class="timeline-header">
+                            <div class="timeline-company-info">
+                                <h3 class="timeline-company">CJ메조미디어</h3>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="timeline-period">2016.05 ~ 2021.08 (<span class="dynamic-duration"
+                                        data-duration-start="2016-05" data-duration-end="2021-08"></span>)</span>
+                                <span class="timeline-position">G3 / 광고솔루션개발팀</span>
+                            </div>
+                        </div>
+                        <p class="timeline-desc">CJ그룹 계열 광고 마케팅 미디어렙사 | 직원수 330명 | 매출액 780억원 (2024)</p>
+
+                        <div class="timeline-projects">
+                            <div class="project-item">
+                                <h4>📺 S-plus (광고 솔루션)</h4>
+                                <p>웹, 모바일 광고 송출 시스템 유지보수 및 광고 효과/리포트 페이지 개발.</p>
+                            </div>
+                            <div class="project-item">
+                                <h4>📉 GRPs 예측 툴</h4>
+                                <p>매체 리포트 및 연령 데이터 입력 시 목표 CTR, 도달율 등을 계산하는 광고 효율 계산 툴 개발.</p>
+                            </div>
+                            <div class="project-item">
+                                <h4>🏢 MTS (자사 ERP)</h4>
+                                <p>자사 ERP 시스템 구축. IO 계산서 발급 및 승인 기능 개발.</p>
+                            </div>
+                            <div class="project-item">
+                                <h4>📊 Insight Matrix</h4>
+                                <p>매출 및 광고 효율을 도형/표로 시각화하는 자사 BI 툴 개발.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 씨엔티테크 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                    </div>
+                    <div class="timeline-content glass-card">
+                        <div class="timeline-header">
+                            <div class="timeline-company-info">
+                                <h3 class="timeline-company">씨엔티테크</h3>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="timeline-period">2013.09 ~ 2016.04 (<span class="dynamic-duration"
+                                        data-duration-start="2013-09" data-duration-end="2016-04"></span>)</span>
+                                <span class="timeline-position">주임 / 인프라솔루션본부</span>
+                            </div>
+                        </div>
+                        <p class="timeline-desc">배달앱(외식 주문 중개서비스) 플랫폼 개발회사 | 직원수 185명 | 매출액 198억원 (2024)</p>
+
+                        <div class="timeline-projects">
+                            <div class="project-item">
+                                <h4>🍕 미스터피자</h4>
+                                <p>Web, App 개발 참여. 모바일웹 리뉴얼 개발, 푸시 전송 모듈 신규 단독 개발.</p>
+                            </div>
+                            <div class="project-item">
+                                <h4>🍔 버거킹</h4>
+                                <p>Web, App 개발 참여. 웹포스 단독 신규 개발.</p>
+                            </div>
+                            <div class="project-item">
+                                <h4>🍗 KFC</h4>
+                                <p>Web, App 개발 참여. Android, iOS 하이브리드 앱 신규 개발.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GWS Education Showcase Section -->
+    <section class="section" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">EDUCATION & LEADERSHIP</span>
+                <h2 class="section-title">사내 교육 활동</h2>
+                <p class="section-subtitle">Google Workspace 도입부터 AI 챔피언 제도까지, 기술 교육을 통해 조직의 변화를 이끌고 있습니다</p>
+            </div>
+            <div class="gallery-showcase">
+                <div class="showcase-main">
+                    <div class="showcase-image-wrap">
+                        <img src="images/gws-training-speaking.jpg" alt="Google Workspace 사내 교육 발표 중인 김윤철"
+                            id="showcase-main-img">
+                        <div class="showcase-overlay">
+                            <span class="showcase-tag">Live Presentation</span>
+                        </div>
+                    </div>
+                    <div class="showcase-info">
+                        <h3>Google Workspace 사내 교육</h3>
+                        <p>Google Workspace 도입 시 <strong>교육 전담 담당자</strong>로 지정되어, 대표이사부터 신입사원까지 전 직급을 대상으로 교육을 진행했습니다.
+                            직접 매뉴얼을 작성하고, 각 직급·부서별 맞춤 교육을 통해 높은 이해도와 채택률을 이끌어냈습니다.</p>
+                        <div class="showcase-highlights">
+                            <div class="highlight-item">
+                                <span class="highlight-icon">👔</span>
+                                <span>대표이사·임원 대상 교육</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-icon">👥</span>
+                                <span>전 직원(366명) 대상 교육</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-icon">📖</span>
+                                <span>교육 매뉴얼 직접 작성</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-icon">🏆</span>
+                                <span>AI 챔피언 제도 운영</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="showcase-secondary">
+                    <div class="showcase-image-wrap">
+                        <img src="images/gws-training-audience.jpg" alt="클리오 전 직원 대상 Google Workspace 교육 현장">
+                        <div class="showcase-overlay">
+                            <span class="showcase-tag">CLIO 전사 교육 현장</span>
+                        </div>
+                    </div>
+                    <div class="showcase-quote glass-card">
+                        <blockquote>
+                            "모든 사원이 AI를 능숙하게 다루긴 어렵습니다. 버거운 직원에게는 심리적 저항선을 낮춰주고, 잘 다루는 직원에게는 전폭적인 지원을 하는 등 맞춤형 교육과 지원이
+                            필요합니다."
+                        </blockquote>
+                        <cite>— 김윤철, AX 엔지니어</cite>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Highlight Section -->
+    <section class="section section-dark" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">HIGHLIGHTS</span>
+                <h2 class="section-title">주요 성과</h2>
+            </div>
+            <div class="achievements-grid">
+                <div class="achievement-card glass-card">
+                    <div class="achievement-number">100%↑</div>
+                    <div class="achievement-label">클럽클리오 단독 운영</div>
+                    <p>B2C 자사몰 단독 개발·운영, 매출 50억→100억(22년 대비 23년). ISMS 인증 진행</p>
+                </div>
+                <div class="achievement-card glass-card">
+                    <div class="achievement-number">1.7억+</div>
+                    <div class="achievement-label">연간 비용 절감</div>
+                    <p>자사 BI 툴 개발로 태블로 비용 연 1.6억 절감, 서버 최적화(40%), 리뷰·검색 내재화로 600만원+ 추가 절감</p>
+                </div>
+
+                <div class="achievement-card glass-card">
+                    <div class="achievement-number">366명</div>
+                    <div class="achievement-label">AI·GWS 사내 교육</div>
+                    <p>Google Workspace 도입 교육, AI 챔피언 제도 운영 등 전 직원 대상 교육 전담</p>
+                </div>
+                <div class="achievement-card glass-card">
+                    <div class="achievement-number">5+</div>
+                    <div class="achievement-label">AI 프로젝트 수행</div>
+                    <p>실시간 번역, Slack 봇, 틱톡 크롤링, 단가 예측 등 AI 기반 사내 시스템 직접 개발</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Certifications -->
+    <section class="section" id="education">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">EDUCATION & MORE</span>
+                <h2 class="section-title">학력 및 자격</h2>
+            </div>
+            <div class="edu-grid">
+                <div class="edu-column">
+                    <h3 class="edu-heading">
+                        <span class="edu-icon">🎓</span> 학력사항
+                    </h3>
+                    <div class="edu-card glass-card">
+                        <div class="edu-period">2018.02 ~ 2019.02</div>
+                        <h4>대림대학교 <span class="edu-degree">학사</span></h4>
+                        <p>모바일인터넷 전공심화 졸업 (안양)</p>
+                        <p class="edu-gpa">학점: <strong>3.9</strong> / 4.5</p>
+                    </div>
+                    <div class="edu-card glass-card">
+                        <div class="edu-period">2009.03 ~ 2014.02</div>
+                        <h4>대림대학교 <span class="edu-degree">전문학사</span></h4>
+                        <p>모바일인터넷 졸업 (안양)</p>
+                        <p class="edu-gpa">학점: <strong>4.2</strong> / 4.5</p>
+                    </div>
+                    <div class="edu-card glass-card">
+                        <div class="edu-period">~ 2008.02</div>
+                        <h4>한성고등학교</h4>
+                        <p>졸업 (서울)</p>
+                    </div>
+                </div>
+                <div class="edu-column">
+                    <h3 class="edu-heading">
+                        <span class="edu-icon">📜</span> 자격 및 기타
+                    </h3>
+                    <div class="edu-card glass-card">
+                        <div class="edu-period">2012.11</div>
+                        <h4>정보처리산업기사</h4>
+                        <p>한국산업인력공단</p>
+                    </div>
+                    <div class="edu-card glass-card">
+                        <div class="edu-period">2009.08 ~ 2011.06</div>
+                        <h4>육군 병장 만기 제대</h4>
+                        <p>병역 의무 이행</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section section-dark" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">CONTACT</span>
+                <h2 class="section-title">연락처</h2>
+                <p class="section-subtitle">함께 성장할 기회를 기다리고 있습니다</p>
+            </div>
+            <div class="contact-grid">
+                <a href="mailto:yoonchul89@naver.com" class="contact-card glass-card">
+                    <div class="contact-icon">✉️</div>
+                    <h3>이메일</h3>
+                    <p>yoonchul89@naver.com</p>
+                </a>
+                <a href="tel:010-4068-7626" class="contact-card glass-card">
+                    <div class="contact-icon">📱</div>
+                    <h3>핸드폰</h3>
+                    <p>010-4068-7626</p>
+                </a>
+                <div class="contact-card glass-card">
+                    <div class="contact-icon">📍</div>
+                    <h3>주소</h3>
+                    <p>경기 성남시 수정구 복정동</p>
+                </div>
+                <div class="contact-card glass-card">
+                    <div class="contact-icon">🗓️</div>
+                    <h3>입사 시기</h3>
+                    <p>채용 확정 후 협의</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="brand-icon">⚡</span>
+                    <span>YC.KIM</span>
+                </div>
+                <p class="footer-text">© 2025 김윤철. AX Engineer.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
