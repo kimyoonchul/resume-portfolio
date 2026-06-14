@@ -416,6 +416,47 @@ function initDynamicDurations() {
 }
 
 /* ========================================
+   LIGHTBOX (이미지 클릭 시 크게 보기)
+   ======================================== */
+function initLightbox() {
+    const overlay = document.getElementById('lightbox-overlay');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    const closeBtn = document.getElementById('lightbox-close');
+
+    if (!overlay) return;
+
+    // 모든 갤러리 이미지와 스킬 이미지에 클릭 이벤트 추가
+    const clickableImages = document.querySelectorAll('.gallery-item img, .skill-image, .profile-photo');
+    clickableImages.forEach(img => {
+        img.addEventListener('click', (e) => {
+            e.stopPropagation();
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+            // 캡션: gallery-caption이 있으면 사용, 없으면 alt 텍스트
+            const caption = img.parentElement.querySelector('.gallery-caption');
+            lightboxCaption.textContent = caption ? caption.textContent : img.alt;
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    // 닫기: X 버튼, 배경 클릭, ESC 키
+    function closeLightbox() {
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    closeBtn.addEventListener('click', closeLightbox);
+    overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) closeLightbox();
+    });
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeLightbox();
+    });
+}
+
+/* ========================================
    INITIALIZE
    ======================================== */
 document.addEventListener('DOMContentLoaded', () => {
@@ -432,4 +473,5 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollReveal();
     initSmoothScroll();
     initCodeTyping();
+    initLightbox();
 });
