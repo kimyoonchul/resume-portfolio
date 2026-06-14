@@ -1577,3 +1577,14 @@ img {
 .skill-card:hover .skill-image {
     transform: scale(1.03);
 }
+
+.skill-image-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-sm);
+    margin: var(--space-md) 0;
+}
+
+.skill-image-gallery .skill-image-wrap {
+    margin: 0;
+}
